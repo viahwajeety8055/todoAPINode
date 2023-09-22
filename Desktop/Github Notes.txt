@@ -1,0 +1,24 @@
+GitHub Command
+
+git config --global user.name "vishwajeet" > it will globally set the name 
+git config --global user.email "vishwajeet.yadav7201@gmail.com" > it will globally set the email
+git config --global --edit > it opens a file in that we can change the email
+git init > it make current repository as empty repo . It add .git file
+
+working directory 
+	git add .> this command will put all file from working directory to staging area
+staging area
+	git commit -m "added" > this command will put all file of staging area into repository
+repository
+
+git checkout > this command is used to change the current branch
+
+
+
+
+
+
+
+
+
+

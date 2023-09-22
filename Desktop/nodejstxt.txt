@@ -1,0 +1,143 @@
+Event loop is non blocking asynchronous execution mechanism that effeciently manages 
+I/O operations and callbacks, allowing for concurrent handling of tasks
+
+Event Loop ==========
+When node js is start it initializes the event loop, processes the provided input script 
+which may make async api calls , schedule timers, or call process.nextTick(), then 
+begins processing the event loop.
+
+timers 
+pending callbacks 
+idle, prepare
+poll 
+check
+close callbacks
+
+Each phase has its own FIFO queue.
+
+EventEmitter =========
+Eventemitter basically is an event by using this we can createcustom event.
+It exposes two methods emit and on
+emit() = basically it use to trigger the event
+on() = basically it is use to register the event
+
+Example :-
+
+const EventEmitter = require('events');
+
+const eventEmitter = new EventEmitter();
+
+eventEmitter.on('start',() => {
+	console.log("Event started");
+})
+
+eventEmitter.emit('start');
+
+EventEmitter in node js is a built-in modules, it enables you to work with custom events.
+EventEmitter basically it exposes several methods by using that we can handle custom events 
+1) on,addListener -> is used to register listeners( this both are working same)
+3) once -> it is listen only once and after any emit is called it will ignored
+2) emit -> is used to trigger the specific event
+4) removeListener(eventname, functionName) -> it accept two parameter event name and function name
+5) removeAllListeners() -> it will remove all listeners of node js program
+
+Difference between spring boot and node js
+node js -> If we have to handle multiple I/O then in that case we choose node js, it require less memory,
+spring boot -> If we have to create standalone application with full of security then in that case i should go for spring boot, it require high CPU intensive usage
+
+What is node js
+advantages
+node js process model
+traditional web server model
+setup developement environment
+working of REPL
+node js console
+
+Standard Callbacks Pattern
+Event Emitter Pattern
+Event Types
+Event Emitter API
+Creating an Event Emitter
+Defer Execution of a Function
+Cancel Execution of a function
+Schedule/ Cancel repetitive execution of a function
+Block/Escape Event loop
+
+variable which is declared with var keyword it has global scope and we can change its value, 
+variable which is declared with let keyword than it has scope in which block it is declared
+const is same as let but there is one difference that its value not changed.
+
+
+A variable declared with the var keyword has global scope, and its value can be changed throughout the program.
+A variable declared with the let keyword has block scope, meaning it is limited to the block (usually within curly braces {}) in which it is declared.
+const is similar to let, but with one key difference: the value assigned to a const variable cannot be changed after it is initially assigned.
+
+Closure -> When you create the function within another function then is called closure. 
+
+example :- 
+function outerFunction(){
+	let outer = 2;
+	function innerFunction(){
+		console.log(outer);
+	}
+	return innerFunction();
+}
+
+Scopes and closures :- 
+There are two types of scope 
+1) local scope
+2) global scope
+
+Closures :- when you create function within another function is called closure. 
+Basically it provide to access the local variable 
+
+
+Scope in javascript 
+A Scope in JavaScript defines what variables you have access to. There are two kinds of scope – global scope and local scope.
+global scope -> If a variable is declared outside all functions or curly braces ({}), it is said to be defined in the global scope.
+local scope -> If a variable is declared inside functions or curly braces ({}), it is said to be defined in the global scope.
+
+
+ES6 features
+let keyword = it is used to create variable and it has a scope inside curly bracs({})
+const keyword = it is same as let, but one key difference ( after initialization we cannot change the value of it)
+arrow functions  = it is a short syntax fo writing function expressions. You dont need the function keyword, the return keyword, and the curly brackets
+spread operator = it is use to combine multiple array value into one array.
+For of = 
+Map Objects = in this value stored in the form of key value pair, it maintains insertion order
+Set Objects = it is not allowing duplicate value
+Classes = it is a blueprint of object, it contains method,variables
+Promises = Promise is an object representing the eventual completion or failure of an asynchronous operation.
+ 
+
+
+ES6 feature > DONE
+Arrow function vs normal function > DONE
+Callbacks, promises and async/await > DONE
+Error handling > DONE
+DOM Manipulation > DONE
+Describe the event delegation pattern in JavaScript. > DONE
+
+Tasks simple Login and registered api
+
+Event delegation : 
+Event delegation in javascript is a pattern that efficiently
+handles events.Events can be added to a parent element
+instead of adding every single element.
+It is useful because the event can be listened to on multiple 
+elments by using just one vent handler. It also uses less memory
+and give better performance.
+The 3 steps to using event delegation
+ > Determine the parent of elments to watch for events
+ > Attach the event listener to the parent element
+ > Use event.target to select the target element
+
+Call ( )
+The call method sets the this inside the function and immediately executes that function.
+
+The difference between call() and bind() is that the call() sets the this keyword and executes the function immediately and it does not create a new copy of the function, while the bind() creates a copy of that function and sets the this keyword.
+
+
+
+
+
